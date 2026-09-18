@@ -1,0 +1,169 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  --breakpoint-xs: 360px;
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-lora);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-primary-deep: var(--primary-deep);
+  --color-surface: var(--surface);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --animate-fade-up: fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-down: fade-down 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-scale: fade-scale 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-down {
+    from {
+      opacity: 0;
+      transform: translateY(-16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-scale {
+    from {
+      opacity: 0;
+      transform: scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+:root {
+  color-scheme: light;
+
+  --background: #ffffff;
+  --foreground: #0f2428;
+
+  --card: #ffffff;
+  --card-foreground: #0f2428;
+
+  --popover: #ffffff;
+  --popover-foreground: #0f2428;
+
+  /* Primary brand color — #005F6B (Institutional Dark Teal Blue) */
+  --primary: #005f6b;
+  --primary-foreground: #ffffff;
+  --primary-deep: #00434c;
+
+  --secondary: #eaf3f5;
+  --secondary-foreground: #005f6b;
+
+  --muted: #f1f7f8;
+  --muted-foreground: #4e6b72;
+
+  --accent: #e5f2f4;
+  --accent-foreground: #005f6b;
+
+  /* Re-mapped to white so all former gold accents render in high-contrast white */
+  --gold: #ffffff;
+  --gold-foreground: #005f6b;
+
+  --surface: #f5f9fa;
+
+  --destructive: #dc2626;
+  --border: #d4e3e6;
+  --input: #d4e3e6;
+  --ring: #005f6b;
+
+  --radius: 0.75rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'ss01', 'cv01';
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif tracking-tight text-balance;
+  }
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+}
+
+@utility container-px {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+
+  @media (min-width: 360px) {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @media (min-width: 1024px) {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@utility text-pretty {
+  text-wrap: pretty;
+}
