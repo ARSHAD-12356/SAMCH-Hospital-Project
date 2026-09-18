@@ -67,7 +67,7 @@ export function InfrastructureExplorer() {
         <Reveal>
           <div className="relative aspect-[21/9] sm:aspect-[2.4/1] w-full overflow-hidden rounded-3xl border border-border bg-card shadow-lg shadow-primary/5">
             <Image
-              src="/Assets/SAMCH campus.png"
+              src="/assets/samch-campus.png"
               alt="SAMCH Campus Aerial & Exterior View"
               fill
               className="object-cover transition-transform duration-500 hover:scale-105"

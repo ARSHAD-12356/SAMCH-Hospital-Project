@@ -120,7 +120,7 @@ export function Hero() {
 
           {/* THE IMAGE — 100% sharp, no overlay on the image itself */}
           <Image
-            src="/Assets/SAMCH campus.png"
+            src="/assets/samch-campus.png"
             alt="Shivam Ashoka Medical College and Hospital Campus"
             fill
             priority
@@ -172,7 +172,7 @@ export function Hero() {
         {/* Mobile building image — below content, full-width, sharp */}
         <div className="relative block h-[220px] w-full overflow-hidden sm:h-[280px] lg:hidden animate-fade-scale">
           <Image
-            src="/Assets/SAMCH campus.png"
+            src="/assets/samch-campus.png"
             alt="Shivam Ashoka Medical College and Hospital Campus"
             fill
             priority

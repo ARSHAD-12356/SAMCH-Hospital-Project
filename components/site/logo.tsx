@@ -45,7 +45,7 @@ export function Logo({ className, invert = false, size = 'default' }: LogoProps)
         )}
       >
         <Image
-          src="/Assets/SAMCH logo.jpeg"
+          src="/assets/samch-logo.jpeg"
           alt="SAMCH Official Logo"
           width={180}
           height={180}

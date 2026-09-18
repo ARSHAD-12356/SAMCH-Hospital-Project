@@ -210,7 +210,7 @@ export function AboutPreview() {
               {/* Hospital Image Card */}
               <div className="relative z-10 aspect-[16/11] sm:aspect-[4/3] w-full overflow-hidden rounded-[22px] sm:rounded-[28px] lg:rounded-[30px] bg-slate-100 shadow-[0_10px_35px_rgba(0,0,0,0.1)]">
                 <Image
-                  src="/Assets/SAMCH campus 2.png"
+                  src="/assets/samch-campus-2.png"
                   alt="Shivam Ashoka Medical College and Hospital Campus"
                   fill
                   priority

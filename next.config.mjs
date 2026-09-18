@@ -7,6 +7,14 @@ const nextConfig = {
     unoptimized: true,
   },
   turbopack: {},
+  async rewrites() {
+    return [
+      {
+        source: '/Assets/:path*',
+        destination: '/assets/:path*',
+      },
+    ]
+  },
   webpack: (config) => {
     config.resolve.symlinks = false
     return config

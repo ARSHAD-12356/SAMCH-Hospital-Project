@@ -38,7 +38,7 @@ export default function AboutPage() {
           <Reveal>
             <div className="relative aspect-[16/10] w-full overflow-hidden rounded-3xl border border-border bg-card shadow-lg shadow-primary/5">
               <Image
-                src="/Assets/04/Hospital Campus.webp"
+                src="/assets/04/hospital-campus.webp"
                 alt="SAMCH Hospital Campus"
                 fill
                 className="object-cover transition-transform duration-500 hover:scale-105"
