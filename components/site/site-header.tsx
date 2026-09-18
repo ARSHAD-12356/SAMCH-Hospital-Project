@@ -59,11 +59,11 @@ export function SiteHeader() {
           <Logo />
 
           {/* RIGHT SIDE (Mobile & Tablet): Compact actions & Menu trigger so Row 1 remains fully functional when Row 2 hides */}
-          <div className="flex items-center gap-2 xl:hidden shrink-0">
+          <div className="flex items-center gap-1.5 xs:gap-2 xl:hidden shrink-0">
             <a
               href="tel:+919031855501"
               aria-label="Call SAMCH"
-              className="flex size-8 xs:size-9 items-center justify-center rounded-lg border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20"
+              className="hidden xs:flex size-8 xs:size-9 items-center justify-center rounded-lg border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20"
             >
               <Phone className="size-3.5 xs:size-4" aria-hidden />
             </a>
