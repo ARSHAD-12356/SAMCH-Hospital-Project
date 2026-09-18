@@ -10,7 +10,13 @@ import { navigation, site, whatsappHref } from '@/lib/site-data'
 import { EnquireButton } from './enquire-button'
 import { Logo } from './logo'
 
-export function MobileMenu() {
+export function MobileMenu({
+  variant = 'default',
+  className,
+}: {
+  variant?: 'default' | 'inverted'
+  className?: string
+}) {
   const [open, setOpen] = useState(false)
   const [expanded, setExpanded] = useState<string | null>(null)
   const [mounted, setMounted] = useState(false)
@@ -41,13 +47,18 @@ export function MobileMenu() {
   }, [open])
 
   return (
-    <div className="xl:hidden">
+    <div className={cn('xl:hidden', className)}>
       {/* Trigger Button in Navigation Bar */}
       <button
         type="button"
         onClick={() => setOpen(true)}
         aria-label="Open navigation menu"
-        className="flex h-8 xs:h-9 sm:h-10 items-center gap-1 xs:gap-1.5 rounded-lg border border-slate-200 bg-slate-50 px-2 xs:px-2.5 sm:px-3 text-slate-700 transition-all hover:bg-slate-100 hover:text-primary active:scale-95"
+        className={cn(
+          'flex h-8 xs:h-9 sm:h-10 items-center gap-1 xs:gap-1.5 rounded-lg px-2 xs:px-2.5 sm:px-3 transition-all active:scale-95',
+          variant === 'inverted'
+            ? 'border border-white/30 bg-white/15 text-white hover:bg-white/25 shadow-xs'
+            : 'border border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100 hover:text-primary',
+        )}
       >
         <Menu className="size-4 xs:size-5" aria-hidden />
         <span className="text-[11px] xs:text-xs font-semibold">Menu</span>

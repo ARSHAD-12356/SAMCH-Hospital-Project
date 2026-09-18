@@ -51,15 +51,27 @@ export function SiteHeader() {
   }
 
   return (
-    <header className="sticky top-0 z-50 animate-fade-down">
-      {/* ROW 1 — BRANDING / INSTITUTION BAR (Always Constant & Fixed) */}
+    <header className="sticky top-0 z-50 w-full">
+      {/* ROW 1 — BRANDING / INSTITUTION BAR (Always Constant & Fixed at Top) */}
       <div className="relative z-20 w-full bg-primary text-white shadow-sm">
-        <div className="container-px flex min-h-[64px] sm:min-h-[72px] items-center justify-between gap-4 lg:gap-8 py-2 sm:py-2.5">
+        <div className="container-px flex min-h-[60px] sm:min-h-[70px] items-center justify-between gap-3 sm:gap-4 lg:gap-8 py-2">
           {/* LEFT SIDE: Actual Logo + Institution Name */}
           <Logo />
 
+          {/* RIGHT SIDE (Mobile & Tablet): Compact actions & Menu trigger so Row 1 remains fully functional when Row 2 hides */}
+          <div className="flex items-center gap-2 xl:hidden shrink-0">
+            <a
+              href="tel:+919031855501"
+              aria-label="Call SAMCH"
+              className="flex size-8 xs:size-9 items-center justify-center rounded-lg border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20"
+            >
+              <Phone className="size-3.5 xs:size-4" aria-hidden />
+            </a>
+            <MobileMenu variant="inverted" />
+          </div>
+
           {/* RIGHT SIDE (Desktop): Quick contact & badges */}
-          <div className="ml-auto hidden items-center gap-4 text-[0.72rem] text-white/90 lg:flex shrink-0 pl-5 border-l border-white/20">
+          <div className="ml-auto hidden items-center gap-4 text-[0.72rem] text-white/90 xl:flex shrink-0 pl-5 border-l border-white/20">
             <a
               href="tel:+919031855501"
               className="inline-flex items-center gap-1.5 opacity-95 transition-opacity hover:opacity-100"
