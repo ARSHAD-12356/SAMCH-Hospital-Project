@@ -39,7 +39,7 @@ export function Logo({ className, invert = false, size = 'default' }: LogoProps)
       {/* Logo Emblem Icon */}
       <div
         className={cn(
-          'relative flex shrink-0 items-center justify-center overflow-hidden rounded-2xl p-1 shadow-md transition-transform duration-300 group-hover:scale-105',
+          'relative flex shrink-0 items-center justify-center overflow-hidden rounded-none p-1 shadow-md transition-transform duration-300 group-hover:scale-105',
           iconSizes[size],
           invert ? 'bg-primary/10 border border-primary/20' : 'bg-white border border-white/20',
         )}
