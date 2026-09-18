@@ -54,7 +54,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 animate-fade-down">
       {/* ROW 1 — BRANDING / INSTITUTION BAR (Always Constant & Fixed) */}
       <div className="relative z-20 w-full bg-primary text-white shadow-sm">
-        <div className="container-px flex min-h-[60px] items-center justify-between gap-4 lg:gap-8 py-2">
+        <div className="container-px flex min-h-[64px] sm:min-h-[72px] items-center justify-between gap-4 lg:gap-8 py-2 sm:py-2.5">
           {/* LEFT SIDE: Actual Logo + Institution Name */}
           <Logo />
 

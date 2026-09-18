@@ -13,20 +13,20 @@ type LogoProps = {
  */
 export function Logo({ className, invert = false, size = 'default' }: LogoProps) {
   const iconSizes = {
-    sm: 'size-7 xs:size-9',
-    default: 'size-8 xs:size-10 sm:size-11',
-    lg: 'size-12 xs:size-14 sm:size-16',
+    sm: 'size-8 xs:size-9 sm:size-10',
+    default: 'size-10 xs:size-12 sm:size-14 md:size-[3.85rem]',
+    lg: 'size-14 xs:size-16 sm:size-20',
   }
 
   const titleSizes = {
-    sm: 'text-[0.58rem] xs:text-[0.68rem] sm:text-sm font-bold',
-    default: 'text-[0.56rem] xs:text-[0.72rem] sm:text-sm md:text-base font-bold',
+    sm: 'text-[0.62rem] xs:text-[0.72rem] sm:text-sm font-bold',
+    default: 'text-[0.62rem] xs:text-[0.8rem] sm:text-[0.96rem] md:text-base lg:text-[1.08rem] font-bold',
     lg: 'text-xs xs:text-[0.95rem] sm:text-base md:text-lg font-bold',
   }
 
   const subSizes = {
-    sm: 'text-[0.42rem] xs:text-[0.48rem] sm:text-[0.6rem]',
-    default: 'text-[0.42rem] xs:text-[0.5rem] sm:text-[0.62rem]',
+    sm: 'text-[0.44rem] xs:text-[0.5rem] sm:text-[0.62rem]',
+    default: 'text-[0.44rem] xs:text-[0.54rem] sm:text-[0.66rem] md:text-[0.72rem]',
     lg: 'text-[0.5rem] xs:text-[0.58rem] sm:text-[0.7rem]',
   }
 
@@ -39,7 +39,7 @@ export function Logo({ className, invert = false, size = 'default' }: LogoProps)
       {/* Logo Emblem Icon */}
       <div
         className={cn(
-          'relative flex shrink-0 items-center justify-center overflow-hidden rounded-2xl p-1.5 shadow-md transition-transform duration-300 group-hover:scale-105',
+          'relative flex shrink-0 items-center justify-center overflow-hidden rounded-2xl p-1 shadow-md transition-transform duration-300 group-hover:scale-105',
           iconSizes[size],
           invert ? 'bg-primary/10 border border-primary/20' : 'bg-white border border-white/20',
         )}
